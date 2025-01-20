@@ -22,6 +22,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -43,6 +45,7 @@ import com.example.musicappui.Screen
 import com.example.musicappui.screensInDrawer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import com.example.musicappui.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -76,9 +79,12 @@ fun MainView() {
                     },
                    content = { Icon(imageVector = Icons.Default.AccountCircle,
                        contentDescription = "Menu")}
-                )  }
+                )  },
+                colors = topAppBarColors(
+                    containerColor = colorResource(id = R.color.app_bar_color),
+                    titleContentColor = colorResource(id = R.color.white),
+                ),
             )
-
         },
         scaffoldState = scaffoldState,
         drawerContent = {
@@ -133,7 +139,7 @@ fun Navigation(navController: NavController, viewModel: MainViewModel, pd : Padd
         startDestination = Screen.DrawerScreen.Account.route, modifier = Modifier.padding(pd) ){
 
         composable(Screen.DrawerScreen.Account.route){
-            //AccountView()
+            AccountView()
         }
         composable(Screen.DrawerScreen.Subscription.route){
             //Subscription()
