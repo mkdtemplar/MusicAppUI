@@ -43,9 +43,6 @@ import androidx.navigation.compose.rememberNavController
 import com.example.musicappui.MainViewModel
 import com.example.musicappui.Screen
 import com.example.musicappui.screensInDrawer
-import com.example.musicappui.ui.theme.AccountDialog
-import com.example.musicappui.ui.theme.AccountView
-//import com.example.musicappui.ui.theme.Subscription
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

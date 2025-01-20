@@ -39,8 +39,8 @@ fun AccountView(){
                     modifier = Modifier.padding(end = 8.dp)
                 )
                 Column {
-                    Text("Panjutorials")
-                    Text("@tutorialsEU")
+                    Text("Ivan Learning")
+                    Text("Kotlin")
                 }
             }
             IconButton(onClick = {}){
