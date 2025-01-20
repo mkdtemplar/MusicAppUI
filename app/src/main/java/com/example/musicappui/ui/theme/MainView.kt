@@ -157,7 +157,7 @@ fun Navigation(navController: NavController, viewModel: MainViewModel, pd:Paddin
             AccountView()
         }
         composable(Screen.DrawerScreen.Subscription.route){
-            //Subscription()
+            Subscription()
         }
     }
 
