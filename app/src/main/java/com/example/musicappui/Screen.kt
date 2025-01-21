@@ -14,7 +14,22 @@ sealed class Screen(val title : String, val route : String) {
                     R.drawable.baseline_person_add_alt_1_24
                     )
             }
+    sealed class BottomScreen(val bTitle : String, val bRoute : String, @DrawableRes val icon : Int) :
+            Screen(bTitle, bRoute) {
+                object Home : BottomScreen("Home", "home",
+            R.drawable.baseline_music_video_24)
+                object Library : BottomScreen("Library", "library",
+            R.drawable.baseline_library_music_24)
+                object Browse : BottomScreen("Browse", "browse",
+            R.drawable.baseline_article_24)
+            }
 }
+
+val screenInBottom = listOf(
+    Screen.BottomScreen.Home,
+    Screen.BottomScreen.Browse,
+    Screen.BottomScreen.Library
+)
 
 val screensInDrawer = listOf(
     Screen.DrawerScreen.Subscription,
